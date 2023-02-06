@@ -7,9 +7,17 @@ class MenusController < ApplicationController
     render json: data
   end
 
-  def show
+  #def show
+    #render all menu with template
+  #  @menu = Menu.find(params[:id])
+  #  data = MenusRender.new(@menu).template
+  #  render json: data 
+  #end
+
+  def show_detail
+    #render only details
     @menu = Menu.find(params[:id])
-    data = MenusRender.new(@menu).template
-    render json: data 
+    data = MenusRender.new(@menu).details
+    render json:data
   end
 end
