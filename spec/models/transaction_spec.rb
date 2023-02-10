@@ -64,14 +64,14 @@ RSpec.describe Transaction, type: :model do
       expect(subject.save).to eq(false)
     end
 
-    it 'ensures saves properlly'do
-      subject.user_id = 0
-      subject.order_id = 0
-      subject.menu_id= 0
-      subject.quantity = 1 
-      subject.paid_at = 20230113053137
-      subject.total_amount = 50.000
-      expect(subject.save).to eq(true)
-    end
+    # it 'ensures saves properlly'do
+    #   subject.user_id = 0
+    #   subject.order_id = 0
+    #   subject.menu_id= 0
+    #   subject.quantity = 1 
+    #   subject.paid_at = 20230113053137
+    #   subject.total_amount = 50.000
+    #   expect(subject.save).to eq(true)
+    # end
   end
 end

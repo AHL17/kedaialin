@@ -86,7 +86,7 @@ In the project directory, you can run:
 <!-- + Response 400 (application/json)
     + Attributes (object)
         + error (object)
-            + message: "url is unavailable" (string)
+            + message: "url unavailableis " (string)
             + code: "400"(string)
         + meta (object)
             + http_status: 400 (number) -->

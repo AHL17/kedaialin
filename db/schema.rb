@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_02_095434) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_10_062551) do
   create_table "menus", force: :cascade do |t|
     t.string "set"
     t.string "category"
     t.string "item"
     t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transaction_details", force: :cascade do |t|
+    t.integer "transaction_id"
+    t.integer "menu_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +44,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_095434) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "role"
+    t.string "buyername"
+    t.text "address"
+    t.datetime "joindate"
   end
 
 end
